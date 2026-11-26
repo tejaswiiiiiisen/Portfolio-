@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* When inside door retrospective portal, completely hide global navbar */
+body.door-open header {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+:root {
+  --background: #030303;
+  --foreground: #ededed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #030303;
+  color: #ededed;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #030303;
+  color: #ededed;
+  overflow-x: hidden;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  selection-background-color: rgba(56, 189, 248, 0.3);
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.25);
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Neon Orange Outline Display Typography (Transparent Hollow Fill, Never Invisible Double-Pulse Flicker Loop) */
+.neon-orange-outline {
+  color: transparent !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 2px rgba(255, 115, 0, 0.75);
+  text-stroke: 2px rgba(255, 115, 0, 0.75);
+  filter: drop-shadow(0 0 12px rgba(255, 106, 0, 0.5)) drop-shadow(0 0 30px rgba(255, 80, 0, 0.25));
+  user-select: none;
+  line-height: 0.9;
+  opacity: 0.65;
+  animation: neonFlickerLoop 4s infinite ease-in-out;
+  will-change: opacity, filter;
+}
+
+@keyframes neonFlickerLoop {
+  /* Phase 1: Base ambient - ALWAYS CLEARLY VISIBLE (NEVER INVISIBLE) */
+  0%, 100% {
+    opacity: 0.45;
+    -webkit-text-stroke: 1.8px rgba(255, 115, 0, 0.6);
+    filter: drop-shadow(0 0 10px rgba(255, 106, 0, 0.35)) drop-shadow(0 0 24px rgba(255, 80, 0, 0.18));
+  }
+  /* Pulse 1: First light surge ON */
+  5% {
+    opacity: 0.95;
+    -webkit-text-stroke: 2.5px rgba(255, 140, 20, 0.95);
+    filter: drop-shadow(0 0 20px rgba(255, 115, 0, 0.85)) drop-shadow(0 0 45px rgba(255, 80, 0, 0.5));
+  }
+  /* Dip: brief light quivers to visible mid-level */
+  9% {
+    opacity: 0.55;
+    -webkit-text-stroke: 2px rgba(255, 115, 0, 0.65);
+    filter: drop-shadow(0 0 12px rgba(255, 106, 0, 0.45)) drop-shadow(0 0 28px rgba(255, 80, 0, 0.22));
+  }
+  /* Pulse 2: Second flash ON - full neon brightness */
+  15% {
+    opacity: 1;
+    -webkit-text-stroke: 2.5px rgba(255, 150, 30, 1);
+    filter: drop-shadow(0 0 26px rgba(255, 120, 0, 0.95)) drop-shadow(0 0 60px rgba(255, 90, 0, 0.6));
+  }
+  /* Sustained brightness: warm vibrant glow */
+  52% {
+    opacity: 0.85;
+    -webkit-text-stroke: 2.2px rgba(255, 120, 0, 0.85);
+    filter: drop-shadow(0 0 18px rgba(255, 106, 0, 0.75)) drop-shadow(0 0 40px rgba(255, 80, 0, 0.35));
+  }
+  /* Subtle live current buzz */
+  60% {
+    opacity: 0.72;
+    -webkit-text-stroke: 2px rgba(255, 115, 0, 0.7);
+    filter: drop-shadow(0 0 14px rgba(255, 106, 0, 0.55));
+  }
+  63% {
+    opacity: 0.82;
+    -webkit-text-stroke: 2px rgba(255, 120, 0, 0.8);
+    filter: drop-shadow(0 0 16px rgba(255, 106, 0, 0.65));
+  }
+  /* Settles back to low ambient - ALWAYS FULLY VISIBLE, NEVER INVISIBLE */
+  72% {
+    opacity: 0.45;
+    -webkit-text-stroke: 1.8px rgba(255, 115, 0, 0.6);
+    filter: drop-shadow(0 0 10px rgba(255, 106, 0, 0.35)) drop-shadow(0 0 24px rgba(255, 80, 0, 0.18));
+  }
+  /* Ambient pause before next cycle */
+  92% {
+    opacity: 0.45;
+    -webkit-text-stroke: 1.8px rgba(255, 115, 0, 0.6);
+    filter: drop-shadow(0 0 10px rgba(255, 106, 0, 0.35)) drop-shadow(0 0 24px rgba(255, 80, 0, 0.18));
+  }
+}
+
+/* Sand smoke atmospheric effect */
+.bg-radial-sand-smoke {
+  background: radial-gradient(circle at 35% 45%, rgba(245, 158, 11, 0.25) 0%, rgba(234, 88, 12, 0.12) 45%, transparent 75%);
+}
+
+.sand-smoke-glow {
+  text-shadow: 0 0 25px rgba(245, 158, 11, 0.6), 0 0 50px rgba(255, 106, 0, 0.4), 0 0 80px rgba(234, 88, 12, 0.25);
+}
+
+@keyframes sandSmokeDrift {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(255, 122, 24, 0.55)) drop-shadow(0 0 45px rgba(234, 88, 12, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 34px rgba(255, 153, 0, 0.85)) drop-shadow(0 0 75px rgba(245, 158, 11, 0.5));
+  }
+}
+
+.animate-sandSmokeGlow {
+  animation: sandSmokeDrift 4.5s ease-in-out infinite;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(14, 14, 14, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-pill {
+  background: rgba(22, 22, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-card {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02) 50%, rgba(56, 189, 248, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glow-card:hover::before {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.5), rgba(168, 85, 247, 0.3) 50%, rgba(255, 255, 255, 0.2));
+}
+
+/* Subtle noise background */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
