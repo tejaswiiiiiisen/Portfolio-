@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { asset } from "@/utils/assetPath";
 import {
   ArrowLeft,
   Calendar,
@@ -1075,7 +1076,7 @@ export default function DoorsPortal() {
                   <div className="relative w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden border border-amber-500/30 bg-[#0E0E12] shadow-[0_0_35px_rgba(245,158,11,0.22),0_20px_50px_rgba(0,0,0,0.95)] flex flex-col justify-between group p-2.5 sm:p-3.5">
                     <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden bg-black flex items-center justify-center">
                       <img
-                        src="/experience/macenza-internship-ceremony.jpg"
+                        src={asset("/experience/macenza-internship-ceremony.jpg")}
                         alt="Macenza Internship Certificate Ceremony"
                         className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       />
@@ -1420,7 +1421,7 @@ export default function DoorsPortal() {
                           {milestone.id.startsWith("exp-macenza") && (
                             <div className="absolute top-5 right-6 sm:top-6 sm:right-8 z-20">
                               <div className="w-28 sm:w-36 h-12 sm:h-14 rounded-2xl bg-white/95 p-2 shadow-[0_0_24px_rgba(37,99,235,0.45)] border border-blue-400/40 flex items-center justify-center hover:scale-105 transition-transform">
-                                <img src="/experience/macenza-logo.png" alt="Macenza" className="w-full h-full object-contain" />
+                                <img src={asset("/experience/macenza-logo.png")} alt="Macenza" className="w-full h-full object-contain" />
                               </div>
                             </div>
                           )}
@@ -1455,7 +1456,7 @@ export default function DoorsPortal() {
                                   <div className="relative rounded-xl overflow-hidden border-[6px] sm:border-[8px] border-[#222226] bg-[#101014] ring-1 ring-[#F59E0B]/50 shadow-[0_16px_40px_rgba(0,0,0,0.95)] p-1.5 flex items-center justify-center group/img">
                                     <div className="relative w-full aspect-[4/3] rounded overflow-hidden bg-[#0A0A0D] border border-amber-500/20 flex items-center justify-center">
                                       <img
-                                        src={milestone.image}
+                                        src={asset(milestone.image)}
                                         alt={milestone.role}
                                         className="w-full h-full object-contain p-1 transition-transform duration-500 group-hover/img:scale-105"
                                       />
@@ -1467,7 +1468,7 @@ export default function DoorsPortal() {
                                   <div className="rounded-xl overflow-hidden border border-neutral-700/60 bg-[#0A0A0C] shadow-[0_8px_30px_rgba(0,0,0,0.85)] p-1.5 flex items-center justify-center group/img">
                                     <div className="relative w-full aspect-[16/11] rounded-lg overflow-hidden bg-black/90">
                                       <img
-                                        src={milestone.image}
+                                        src={asset(milestone.image)}
                                         alt={milestone.role}
                                         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                                       />
@@ -1531,7 +1532,7 @@ export default function DoorsPortal() {
                                         <span>LinkedIn</span>
                                       </a>
                                       <a
-                                        href={milestone.liveUrl || milestone.image || "https://tejaswisen.dev"}
+                                        href={asset(milestone.liveUrl || milestone.image || "https://tejaswisen.dev")}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-mono font-bold text-amber-300 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/60 shadow-[0_0_18px_rgba(245,158,11,0.25)] transition-all hover:scale-105 active:scale-95"
@@ -1568,7 +1569,7 @@ export default function DoorsPortal() {
 
                                   {activeCategory.id !== "experience" && (
                                     <a
-                                      href={milestone.liveUrl || milestone.image || "https://tejaswisen.dev"}
+                                      href={asset(milestone.liveUrl || milestone.image || "https://tejaswisen.dev")}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="inline-flex items-center gap-1.5 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-mono font-bold text-white bg-black/85 border border-amber-500/40 shadow-[0_0_12px_rgba(245,158,11,0.15)] hover:border-amber-400 hover:text-amber-300 hover:shadow-[0_0_22px_rgba(245,158,11,0.35)] transition-all hover:scale-105 active:scale-95"

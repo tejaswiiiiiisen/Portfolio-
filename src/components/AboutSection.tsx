@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { asset } from "@/utils/assetPath";
 import {
   Sparkles,
   MapPin,
@@ -217,7 +218,7 @@ export default function AboutSection() {
                   <div className="relative w-full max-w-sm sm:max-w-md aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden border border-amber-500/30 shadow-[0_0_35px_rgba(245,158,11,0.2),0_20px_45px_rgba(0,0,0,0.85)] group bg-black cursor-pointer">
                     {/* The Full Photo - Black & White by default, reveals real vivid color on hover */}
                     <img
-                      src="/about/tejaswi-hawa-mahal.jpg"
+                      src={asset("/about/tejaswi-hawa-mahal.jpg")}
                       alt="Tejaswi Sen at Hawa Mahal, Jaipur"
                       className="w-full h-full object-cover object-center grayscale contrast-[1.08] brightness-95 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 transition-all duration-700 ease-out group-hover:scale-105"
                     />

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import ScrollyCanvas from "@/components/ScrollyCanvas";
 import DoorsPortal from "@/components/DoorsPortal";
 import Footer from "@/components/Footer";
+import { asset } from "@/utils/assetPath";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Navbar />
 
       {/* 500vh Sticky Scrollytelling Canvas + Parallax Overlay */}
-      <ScrollyCanvas totalFrames={102} framePathPrefix="/sequence/frame_" />
+      <ScrollyCanvas totalFrames={102} framePathPrefix={asset("/sequence/frame_")} />
 
       {/* "Magic happens behind the doors" - 3D Interactive Doors Portal */}
       <DoorsPortal />

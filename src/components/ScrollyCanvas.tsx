@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import Overlay from "./Overlay";
+import { asset } from "@/utils/assetPath";
 
 interface ScrollyCanvasProps {
   totalFrames?: number;
@@ -29,11 +30,11 @@ export default function ScrollyCanvas({
     offset: ["start start", "end end"],
   });
 
-  // Calculate target frame URL
+  // Calculate target frame URL with basePath support
   const getFrameUrl = useCallback(
     (index: number) => {
       const padded = String(index).padStart(3, "0");
-      return `${framePathPrefix}${padded}.webp`;
+      return asset(`${framePathPrefix}${padded}.webp`);
     },
     [framePathPrefix]
   );
