@@ -185,7 +185,7 @@ export default function CoreTechBento() {
         </div>
       </div>
 
-      {/* Bottom Row: 10+ Projects Completed & Open to Full-Stack Roles Pill Badge */}
+      {/* Bottom Row: 10+ Projects Completed */}
       <div className="flex items-center justify-between gap-2.5">
         {/* Card 3: 10+ Projects Completed */}
         <div className="flex-1 flex items-center justify-between rounded-xl border border-white/10 bg-black/55 px-3.5 py-2 backdrop-blur-2xl shadow-[0_6px_20px_rgba(0,0,0,0.7)] hover:border-orange-500/40 transition-all">
@@ -198,20 +198,6 @@ export default function CoreTechBento() {
             </span>
           </div>
           <span className="text-orange-400/50 text-[10px]">✦</span>
-        </div>
-
-        {/* Pill Badge: Open to Full-Stack Roles • live */}
-        <div className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-black/75 px-3 py-2 backdrop-blur-2xl shadow-[0_6px_20px_rgba(0,0,0,0.8)] shrink-0">
-          <span className="text-[11px] font-semibold text-neutral-200">
-            Open to Roles
-          </span>
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-          </span>
-          <span className="text-emerald-400 font-mono text-[10px] font-bold">
-            live
-          </span>
         </div>
       </div>
     </div>

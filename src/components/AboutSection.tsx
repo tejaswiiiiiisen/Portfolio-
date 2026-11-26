@@ -432,11 +432,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* Bottom CTA Card within Skills Panel */}
-                <div className="mt-8 pt-5 border-t border-white/[0.08] flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34D399]" />
-                    <span className="text-xs font-mono text-neutral-400">Open to Roles</span>
-                  </div>
+                <div className="mt-8 pt-5 border-t border-white/[0.08] flex items-center justify-end">
                   <Link
                     href="/contact"
                     className="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 font-bold tracking-wide transition-colors"
